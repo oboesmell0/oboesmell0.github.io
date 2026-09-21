@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩版毛衣大全 - 提供最新的韩版毛衣款式推荐、穿搭指南、材质解析及热门韩风毛衣品牌评测。为您打造温暖优雅的韩式秋冬造型。">
+    <meta name="keywords" content="韩版毛衣,韩风毛衣,针织衫,毛衣穿搭,韩系女装">
+    <title>韩版毛衣-韩风针织穿搭指南与款式推荐</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8E6B5C;
+            --secondary-color: #F4ECE5;
+            --accent-color: #D4A373;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-color: #FAFAFA;
+            --white: #FFFFFF;
+            --spacing-unit: 1rem;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(135deg, rgba(142, 107, 92, 0.9), rgba(212, 163, 115, 0.7)), url('https://picsum.photos/seed/fashion2/1920/1080') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            background-color: var(--white);
+            color: var(--primary-color);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Trending Styles Grid */
+        .style-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .style-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .style-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .style-image {
+            height: 350px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .style-image img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .style-card:hover .style-image img {
+            transform: scale(1.05);
+        }
+
+        .style-info {
+            padding: 1.5rem;
+        }
+
+        .style-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .style-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .style-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: var(--white);
+        }
+
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .guide-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .guide-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .guide-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .guide-text h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .guide-text p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .guide-sidebar {
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+        }
+
+        .guide-sidebar h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .sidebar-list li {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .sidebar-list li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-list a {
+            font-size: 0.95rem;
+            display: block;
+            color: var(--text-dark);
+        }
+
+        .sidebar-list a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        /* Material & Fabric Section */
+        .material-section {
+            background-color: #FDFBF7;
+        }
+
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .material-item {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .material-img {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            background-color: #eee;
+        }
+
+        .material-item h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .material-item p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            padding: 1.5rem 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C2C2C;
+            color: #ccc;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+            .material-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+            nav ul {
+                margin: 1rem 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .nav-actions {
+                width: 100%;
+                justify-content: center;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .style-image {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .material-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-actions {
+                display: none; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">Han<span>Style</span>毛衣</a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#styles">流行款式</a></li>
+                    <li><a href="#guide">穿搭指南</a></li>
+                    <li><a href="#materials">材质科普</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn-outline">品牌评测</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>解锁韩版毛衣的<br>温暖与时尚</h1>
+                    <p>探索韩系针织艺术的精髓，从经典的麻花纹理到慵懒的宽松版型，为您呈现最前沿的韩版毛衣穿搭灵感与选购指南。</p>
+                    <a href="#styles" class="btn-primary">浏览热门款式</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending Styles -->
+        <section id="styles" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>本季热门韩版毛衣款式</h2>
+                    <p>紧跟首尔街头潮流，精选当下最流行的针织单品</p>
+                </div>
+                
+                <div class="style-grid">
+                    <!-- Card 1 -->
+                    <article class="style-card">
+                        <div class="style-image">
+                            <img src="https://picsum.photos/seed/korean1/400/500" alt="慵懒风宽松毛衣">
+                        </div>
+                        <div class="style-info">
+                            <span class="style-tag">宽松慵懒风</span>
+                            <h3> Oversized 落肩毛衣</h3>
+                            <p>遮肉显瘦，搭配高腰裤或半身裙，打造韩剧女主角的随性氛围感。</p>
+                            <a href="#" class="read-more">查看穿搭指南 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="style-card">
+                        <div class="style-image">
+                            <img src="https://picsum.photos/seed/korean2/400/500" alt="复古粗棒针毛衣">
+                        </div>
+                        <div class="style-info">
+                            <span class="style-tag">复古学院风</span>
+                            <h3> 粗棒针复古纹理</h3>
+                            <p>经典的麻花与罗纹设计，增添学院气息，适合秋冬季节的通勤穿搭。</p>
+                            <a href="#" class="read-more">查看穿搭指南 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="style-card">
+                        <div class="style-image">
+                            <img src="https://picsum.photos/seed/korean3/400/500" alt="高领修身毛衣">
+                        </div>
+                        <div class="style-info">
+                            <span class="style-tag">极简通勤风</span>
+                            <h3> 纯色高领打底衫</h3>
+                            <p>简约不简单，贴身剪裁勾勒身形，是打造层次感穿搭的必备单品。</p>
+                            <a href="#" class="read-more">查看穿搭指南 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="style-card">
+                        <div class="style-image">
+                            <img src="https://picsum.photos/seed/korean4/400/500" alt="镂空设计毛衣">
+                        </div>
+                        <div class="style-info">
+                            <span class="style-tag">设计感时尚</span>
+                            <h3> 钩花镂空针织衫</h3>
+                            <p>精致的镂空花纹，透气舒适，展现女性的柔美与精致品味。</p>
+                            <a href="#" class="read-more">查看穿搭指南 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="section guide-section">
+            <div class="container">
+                <div class="guide-layout">
+                    <div class="guide-content">
+                        <h2>韩版毛衣穿搭技巧</h2>
+                        <div class="guide-list">
+                            <div class="guide-item">
+                                <div class="guide-icon">1</div>
+                                <div class="guide-text">
+                                    <h3>上宽下紧，平衡比例</h3>
+                                    <p>选择宽松的韩版毛衣时，下装建议搭配修身牛仔裤或铅笔裙，利用视觉对比拉长腿部线条，避免整体造型过于臃肿。</p>
+                                </div>
+                            </div>
+                            <div class="guide-item">
+                                <div class="guide-icon">2</div>
+                                <div class="guide-text">
+                                    <h3>叠穿技巧，增加层次</h3>
+                                    <p>在韩版毛衣内叠穿一件衬衫或高领打底，露出领口和下摆，既保暖又能打破单调，增加穿搭的精致度。</p>
+                                </div>
+                            </div>
+                            <div class="guide-item">
+                                <div class="guide-icon">3</div>
+                                <div class="guide-text">
+                                    <h3>色彩搭配，柔和高级</h3>
+                                    <p>韩系风格偏爱莫兰迪色系或大地色系。内搭建议使用同色系或低饱和度颜色，外搭毛衣可以适当增加一点亮色点缀。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <aside class="guide-sidebar">
+                        <h3>热门分类浏览</h3>
+                        <ul class="sidebar-list">
+                            <li><a href="#">短款毛衣 (显高)</a></li>
+                            <li><a href="#">长款毛衣 (大衣感)</a></li>
+                            <li><a href="#">开衫毛衣 (温柔风)</a></li>
+                            <li><a href="#">V领毛衣 (修饰脸型)</a></li>
+                            <li><a href="#">拼色毛衣 (个性风)</a></li>
+                            <li><a href="#">亲子款毛衣</a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materials Section -->
+        <section id="materials" class="section material-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>材质科普与选购</h2>
+                    <p>了解不同面料特性，找到最适合您的舒适单品</p>
+                </div>
+                
+                <div class="material-grid">
+                    <div class="material-item">
+                        <div class="material-img" style="background-image: url('https://picsum.photos/seed/cashmere/100/100'); background-size: cover;"></div>
+                        <h4>山羊绒</h4>
+                        <p>轻盈保暖，亲肤性极佳，是高端韩版毛衣的首选材质。</p>
+                    </div>
+                    <div class="material-item">
+                        <div class="material-img" style="background-image: url('https://picsum.photos/seed/wool/100/100'); background-size: cover;"></div>
+                        <h4>美利奴羊毛</h4>
+                        <p>弹性好，不易起球，适合制作结构感强的韩式纹理毛衣。</p>
+                    </div>
+                    <div class="material-item">
+                        <div class="material-img" style="background-image: url('https://picsum.photos/seed/cotton/100/100'); background-size: cover;"></div>
+                        <h4>精梳棉</h4>
+                        <p>透气吸汗，纹理清晰，适合春秋季节的轻薄韩版针织衫。</p>
+                    </div>
+                    <div class="material-item">
+                        <div class="material-img" style="background-image: url('https://picsum.photos/seed/acrylic/100/100'); background-size: cover;"></div>
+                        <h4>腈纶混纺</h4>
+                        <p>价格亲民，抗皱易打理，适合日常通勤的平价选择。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">韩版毛衣通常有什么特点？</div>
+                        <div class="faq-answer">
+                            <p>韩版毛衣通常版型比较宽松，强调舒适感和随性风格。设计上多采用简约的纯色或简单的几何纹理，注重色彩搭配的柔和度，以及剪裁上的利落感。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">韩版毛衣如何清洗保养？</div>
+                        <div class="faq-answer">
+                            <p>建议手洗或使用轻柔模式机洗，水温控制在30度以下。洗涤时避免用力揉搓，洗后平铺晾干，避免暴晒。为了保持毛衣弹性，可使用衣物柔顺剂并少量使用蒸汽熨斗整理。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">什么身材适合穿韩版毛衣？</div>
+                        <div class="faq-answer">
+                            <p>韩版毛衣的宽松版型对身材包容性很强。微胖身材可以通过内搭高腰下装来修饰比例；瘦削身材则可以通过叠穿增加厚度，避免显得单薄。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于韩版毛衣</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8; color: #999;">
+                        HanStyle毛衣致力于为国内读者提供最前沿的韩风针织资讯。我们专注于解析韩式穿搭美学，提供实用的选购建议与保养指南。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">最新流行趋势</a></li>
+                        <li><a href="#">品牌推荐</a></li>
+                        <li><a href="#">尺码对照表</a></li>
+                        <li><a href="#">搭配灵感</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>穿搭分类</h4>
+                    <ul>
+                        <li><a href="#">职场通勤</a></li>
+                        <li><a href="#">休闲约会</a></li>
+                        <li><a href="#">秋冬保暖</a></li>
+                        <li><a href="#">节日穿搭</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>合作咨询</li>
+                        <li>投稿建议</li>
+                        <li>用户反馈</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 HanStyle毛衣指南. All rights reserved. 本页面仅供展示与交流使用。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
