@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foxfire - 赛博朋克风格独立游戏下载与社区</title>
+    <meta name="description" content="foxfire 是一款以赛博朋克为背景的独立动作冒险游戏，提供中文下载、配置指南、DLC内容及玩家社区讨论。探索霓虹都市，体验硬核战斗。">
+    <meta name="keywords" content="foxfire, 独立游戏, 赛博朋克, 动作游戏, 下载, 游戏攻略">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #050505;
+            --card-bg: #111111;
+            --text-main: #e0e0e0;
+            --text-muted: #888888;
+            --accent-primary: #ff3366; /* Neon Pink */
+            --accent-secondary: #00e5ff; /* Neon Cyan */
+            --border-color: #333333;
+            --font-stack: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-stack);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-secondary);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+        }
+
+        /* Header & Nav */
+        header {
+            background: rgba(5, 5, 5, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #fff;
+        }
+
+        .logo span {
+            color: var(--accent-primary);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-secondary);
+        }
+
+        .btn-download {
+            background: var(--accent-primary);
+            color: #fff;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .btn-download:hover {
+            background: #d62b4e;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(to right, rgba(5,5,5,0.9) 0%, rgba(5,5,5,0.4) 100%), url('https://picsum.photos/seed/foxfirecyber/1920/1080.jpg') center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(255, 51, 102, 0.2);
+            color: var(--accent-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 51, 102, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: var(--accent-secondary);
+            -webkit-text-stroke: 1px var(--accent-secondary);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent-secondary);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background: #00b8cc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 229, 255, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: #fff;
+        }
+
+        .btn-outline:hover {
+            border-color: #fff;
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 0;
+            background: #0a0a0a;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-secondary);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-secondary);
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Game Info Section */
+        .game-info {
+            padding: 5rem 0;
+        }
+
+        .info-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .info-image {
+            position: relative;
+        }
+
+        .info-image img {
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 1px solid var(--border-color);
+        }
+
+        .info-list {
+            margin-top: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .info-item label {
+            color: var(--text-muted);
+        }
+
+        .info-item span {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        /* System Requirements */
+        .system-req {
+            background: #0f0f0f;
+            padding: 5rem 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .req-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+        }
+
+        .req-column h3 {
+            color: var(--accent-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .req-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .req-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-secondary);
+        }
+
+        /* Download Section */
+        .download-section {
+            padding: 5rem 0;
+            text-align: center;
+            background: linear-gradient(180deg, #050505 0%, #0a0a0a 100%);
+        }
+
+        .download-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .dl-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 0;
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: var(--card-bg);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .faq-question:hover {
+            background: #151515;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: #0a0a0a;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            margin-top: 1rem;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-secondary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #1a1a1a;
+            color: #555;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin: 1rem 0;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                height: 500px;
+                text-align: center;
+            }
+
+            .hero-content {
+                margin: 0 auto;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .info-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">foxfire<span>.exe</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#features" class="active">游戏特色</a></li>
+                    <li><a href="#about">关于故事</a></li>
+                    <li><a href="#specs">系统需求</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#download" class="btn-download">立即下载</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="tag">Cyberpunk Action RPG</span>
+                    <h1>逃离网络深渊，<br>重燃<span>火种</span>。</h1>
+                    <p>在未来的霓虹都市中，扮演代号“Foxy”的特工。利用黑客技术与近战格斗，在赛博义体与反叛军之间寻找真相。</p>
+                    <div class="hero-actions">
+                        <a href="#download" class="btn btn-primary">获取版本 1.2.0</a>
+                        <a href="#trailer" class="btn btn-outline">观看预告片</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心玩法</h2>
+                    <p>深度融合黑客入侵与快节奏战斗</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>动态网络入侵</h3>
+                        <p>不仅仅是射击，你需要潜入敌人的神经网络。在现实世界中与虚拟空间同步，实时修改环境结构，解开复杂的逻辑谜题。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">⚔️</div>
+                        <h3>近战与义体</h3>
+                        <p>抛弃笨重的枪械。使用高频振动刀刃进行高速连击。通过植入体自定义你的战斗风格，打造独一无二的特工形象。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🏙️</div>
+                        <h3>开放探索</h3>
+                        <p>探索巨大的多层城市结构。从底层的贫民窟到顶层的云端数据中心，每个区域都有独特的敌人、任务和秘密。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About/Story Section -->
+        <section id="about" class="game-info">
+            <div class="container">
+                <div class="info-layout">
+                    <div class="info-image">
+                        <img src="https://picsum.photos/seed/foxfirecity/600/400.jpg" alt="Foxyire 游戏场景截图">
+                    </div>
+                    <div class="info-content">
+                        <h2>代号：Foxfire</h2>
+                        <p style="margin-top: 1rem; color: #ccc;">
+                            2099年，网络公司“NeuroCore”垄断了全球的神经连接服务。反抗军“Foxfire”试图切断他们的控制。你是一名被遗忘的实验体，在沉睡中被唤醒。
+                        </p>
+                        <p style="margin-top: 1rem; color: #ccc;">
+                            你的任务很简单：潜入神经核心，下载“源代码”，然后……活下去。但系统检测到了你的存在，无数赛博怪物正在涌来。
+                        </p>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <label>类型</label>
+                                <span>动作冒险 / 黑客解谜</span>
+                            </div>
+                            <div class="info-item">
+                                <label>开发商</label>
+                                <span>Neon Void Studios</span>
+                            </div>
+                            <div class="info-item">
+                                <label>首发平台</label>
+                                <span>Windows PC</span>
+                            </div>
+                            <div class="info-item">
+                                <label>语言支持</label>
+                                <span>简体中文 / English</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Requirements -->
+        <section id="specs" class="system-req">
+            <div class="container">
+                <div class="section-header">
+                    <h2>系统需求</h2>
+                    <p>确保你的电脑能够流畅运行赛博世界</p>
+                </div>
+                <div class="req-grid">
+                    <div class="req-column">
+                        <h3>最低配置</h3>
+                        <ul class="req-list">
+                            <li>操作系统: Windows 10 64-bit</li>
+                            <li>处理器: Intel Core i5-6600 / AMD Ryzen 3 1200</li>
+                            <li>内存: 8 GB RAM</li>
+                            <li>显卡: NVIDIA GTX 960 / AMD Radeon R9 380</li>
+                            <li>DirectX 版本: 12</li>
+                            <li>存储空间: 需要 25 GB 可用空间</li>
+                        </ul>
+                    </div>
+                    <div class="req-column">
+                        <h3>推荐配置</h3>
+                        <ul class="req-list">
+                            <li>操作系统: Windows 11 64-bit</li>
+                            <li>处理器: Intel Core i7-10700 / AMD Ryzen 7 5800X</li>
+                            <li>内存: 16 GB RAM</li>
+                            <li>显卡: NVIDIA RTX 2060 / AMD Radeon RX 5700</li>
+                            <li>DirectX 版本: 12</li>
+                            <li>存储空间: 需要 35 GB 可用空间 (SSD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="download-section">
+            <div class="container">
+                <div class="download-card">
+                    <h2>准备出发了吗？</h2>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">免费下载最新版本，立即开始你的逃亡之旅。</p>
+                    
+                    <div class="dl-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">1.2.0</span>
+                            <span class="stat-label">当前版本</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">25 GB</span>
+                            <span class="stat-label">安装大小</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">100k+</span>
+                            <span class="stat-label">每日玩家</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions" style="justify-content: center;">
+                        <a href="#" class="btn btn-primary" onclick="alert('感谢下载！请访问官方论坛获取更多支持。')">Windows 下载 (v1.2.0)</a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.8rem; color: #555;">支持 64 位系统，包含完整中文本地化</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题 (FAQ)</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">游戏是否包含付费内容？</div>
+                        <div class="faq-answer">
+                            <p>目前游戏本体完全免费。我们计划在未来推出一些可选的皮肤和地图包，但核心剧情和所有基础功能都将永久免费。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">支持手柄操作吗？</div>
+                        <div class="faq-answer">
+                            <p>是的，游戏原生支持 Xbox 和 PlayStation 手柄，针对按键布局进行了优化，提供极佳的战斗体验。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">游戏运行卡顿怎么办？</div>
+                        <div class="faq-answer">
+                            <p>请确保关闭后台其他程序。如果使用集成显卡，建议在设置中降低“粒子特效”和“阴影质量”。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">foxfire<span>.exe</span></a>
+                    <p>致力于打造最纯粹的赛博朋克游戏体验。探索、战斗、反抗。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>探索</h4>
+                    <ul>
+                        <li><a href="#">最新更新</a></li>
+                        <li><a href="#">官方论坛</a></li>
+                        <li><a href="#">开发者博客</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持</h4>
+                    <ul>
+                        <li><a href="#">技术支持</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">反馈渠道</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>法律</h4>
+                    <ul>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Neon Void Studios. All rights reserved. foxfire is a trademark of Neon Void Studios.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close others
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
