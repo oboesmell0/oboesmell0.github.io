@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>h吧h女角色-热门角色图鉴与二次元形象赏析</title>
+    <meta name="description" content="本站专注于二次元文化，提供h吧h女角色的详细图鉴、角色背景解析、人气排行及高清壁纸下载，满足二次元爱好者对角色形象与设定的深度探索需求。">
+    <meta name="keywords" content="h吧h女角色,二次元角色,动漫人物,角色图鉴,二次元壁纸,角色解析">
+    <style>
+        :root {
+            --primary-color: #ff6b81;
+            --secondary-color: #ff4757;
+            --accent-color: #2f3542;
+            --bg-color: #f1f2f6;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-light: #747d8c;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #dfe4ea;
+            outline: none;
+            width: 200px;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            border-color: var(--secondary-color);
+            width: 240px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #57606f;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        main {
+            padding-bottom: 60px;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            background-color: var(--card-bg);
+            border: 1px solid #dfe4ea;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        /* Character Grid */
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            group: hover;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            padding-top: 140%; /* Aspect Ratio */
+            overflow: hidden;
+        }
+
+        .card-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .card-tags span {
+            display: inline-block;
+            font-size: 12px;
+            padding: 3px 8px;
+            background-color: #f1f2f6;
+            border-radius: 4px;
+            color: var(--text-light);
+            margin-right: 5px;
+        }
+
+        .card-action {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #f1f2f6;
+            color: var(--text-main);
+            border-radius: 6px;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .card-action:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Section Styling */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #dfe4ea;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--accent-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        .section-more {
+            font-size: 14px;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        /* Detail/Intro Section */
+        .intro-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .intro-content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .intro-content p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        /* Ranking List */
+        .ranking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            transition: var(--transition);
+        }
+
+        .ranking-item:hover {
+            transform: translateX(5px);
+        }
+
+        .rank-num {
+            font-size: 24px;
+            font-weight: 800;
+            color: #dfe4ea;
+            width: 30px;
+            text-align: center;
+            margin-right: 15px;
+        }
+
+        .rank-num.top-1 { color: #ff4757; }
+        .rank-num.top-2 { color: #ffa502; }
+        .rank-num.top-3 { color: #2ed573; }
+
+        .rank-info {
+            flex: 1;
+        }
+
+        .rank-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .rank-desc {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #a4b0be;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #57606f;
+            color: #a4b0be;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .character-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 15px;
+            }
+
+            .card-content {
+                padding: 15px 10px;
+            }
+
+            .card-title {
+                font-size: 16px;
+            }
+
+            .card-image-wrapper {
+                padding-top: 120%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>H</span>吧H女角色
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">角色图鉴</a></li>
+                    <li><a href="#">热门榜单</a></li>
+                    <li><a href="#">壁纸下载</a></li>
+                    <li><a href="#">社区讨论</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索角色名...">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>探索二次元魅力</h1>
+            <p>汇集全网最热门的h吧h女角色，提供高清形象展示、详细设定解析及最新动态。</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <button class="filter-btn active">全部</button>
+            <button class="filter-btn">热门推荐</button>
+            <button class="filter-btn">新晋人气</button>
+            <button class="filter-btn">经典角色</button>
+            <button class="filter-btn">原创设计</button>
+        </div>
+
+        <!-- Character Grid -->
+        <section class="section-header">
+            <h2 class="section-title">精选角色</h2>
+            <a href="#" class="section-more">查看全部 &rarr;</a>
+        </section>
+
+        <div class="character-grid">
+            <!-- Card 1 -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://picsum.photos/seed/anime1/400/560" alt="角色头像" class="card-image" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">星野咲夜</h3>
+                    <div class="card-meta">
+                        <span>热度: 9.8k</span>
+                        <span>更新: 2023-10</span>
+                    </div>
+                    <div class="card-tags">
+                        <span>傲娇</span>
+                        <span>魔法少女</span>
+                    </div>
+                    <a href="#" class="card-action">查看详情</a>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://picsum.photos/seed/anime2/400/560" alt="角色头像" class="card-image" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">红叶凛</h3>
+                    <div class="card-meta">
+                        <span>热度: 8.5k</span>
+                        <span>更新: 2023-11</span>
+                    </div>
+                    <div class="card-tags">
+                        <span>御姐</span>
+                        <span>刺客</span>
+                    </div>
+                    <a href="#" class="card-action">查看详情</a>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://picsum.photos/seed/anime3/400/560" alt="角色头像" class="card-image" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">白猫露娜</h3>
+                    <div class="card-meta">
+                        <span>热度: 7.2k</span>
+                        <span>更新: 2023-09</span>
+                    </div>
+                    <div class="card-tags">
+                        <span>萝莉</span>
+                        <span>治愈系</span>
+                    </div>
+                    <a href="#" class="card-action">查看详情</a>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://picsum.photos/seed/anime4/400/560" alt="角色头像" class="card-image" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">紫苑艾米</h3>
+                    <div class="card-meta">
+                        <span>热度: 9.1k</span>
+                        <span>更新: 2023-12</span>
+                    </div>
+                    <div class="card-tags">
+                        <span>学姐</span>
+                        <span>学园</span>
+                    </div>
+                    <a href="#" class="card-action">查看详情</a>
+                </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://picsum.photos/seed/anime5/400/560" alt="角色头像" class="card-image" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">黑泽夜空</h3>
+                    <div class="card-meta">
+                        <span>热度: 6.8k</span>
+                        <span>更新: 2023-08</span>
+                    </div>
+                    <div class="card-tags">
+                        <span>赛博朋克</span>
+                        <span>机甲</span>
+                    </div>
+                    <a href="#" class="card-action">查看详情</a>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://picsum.photos/seed/anime6/400/560" alt="角色头像" class="card-image" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">春日野绘里</h3>
+                    <div class="card-meta">
+                        <span>热度: 8.9k</span>
+                        <span>更新: 2023-11</span>
+                    </div>
+                    <div class="card-tags">
+                        <span>护士</span>
+                        <span>日常</span>
+                    </div>
+                    <a href="#" class="card-action">查看详情</a>
+                </div>
+            </article>
+
+            <!-- Card 7 -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://picsum.photos/seed/anime7/400/560" alt="角色头像" class="card-image" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">深山美树</h3>
+                    <div class="card-meta">
+                        <span>热度: 5.5k</span>
+                        <span>更新: 2023-07</span>
+                    </div>
+                    <div class="card-tags">
+                        <span>OL</span>
+                        <span>职场</span>
+                    </div>
+                    <a href="#" class="card-action">查看详情</a>
+                </div>
+            </article>
+
+            <!-- Card 8 -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://picsum.photos/seed/anime8/400/560" alt="角色头像" class="card-image" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">星川莉莉</h3>
+                    <div class="card-meta">
+                        <span>热度: 9.4k</span>
+                        <span>更新: 2023-12</span>
+                    </div>
+                    <div class="card-tags">
+                        <span>偶像</span>
+                        <span>舞台</span>
+                    </div>
+                    <a href="#" class="card-action">查看详情</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Ranking Section -->
+        <section class="intro-section">
+            <div class="section-header">
+                <h2 class="section-title">月度人气榜单</h2>
+                <a href="#" class="section-more">完整榜单 &rarr;</a>
+            </div>
+            <div class="ranking-list">
+                <div class="ranking-item">
+                    <span class="rank-num top-1">1</span>
+                    <div class="rank-info">
+                        <div class="rank-name">星野咲夜</div>
+                        <div class="rank-desc">魔法与现实的交错，超高人气角色。</div>
+                    </div>
+                </div>
+                <div class="ranking-item">
+                    <span class="rank-num top-2">2</span>
+                    <div class="rank-info">
+                        <div class="rank-name">红叶凛</div>
+                        <div class="rank-desc">冷艳刺客，暗夜中的致命绽放。</div>
+                    </div>
+                </div>
+                <div class="ranking-item">
+                    <span class="rank-num top-3">3</span>
+                    <div class="rank-info">
+                        <div class="rank-name">星川莉莉</div>
+                        <div class="rank-desc">聚光灯下的女王，舞台魅力无与伦比。</div>
+                    </div>
+                </div>
+                <div class="ranking-item">
+                    <span class="rank-num">4</span>
+                    <div class="rank-info">
+                        <div class="rank-name">紫苑艾米</div>
+                        <div class="rank-desc">温柔学姐，知性优雅的代名词。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="intro-section">
+            <div class="intro-content">
+                <h2>关于h吧h女角色</h2>
+                <p>“h吧”通常指代特定的网络社区或讨论圈子，专注于二次元文化中的人物形象与角色设定。本站致力于为用户提供一个高质量的角色展示与赏析平台。我们不仅关注角色的外观设计，更深入挖掘其性格特征、背景故事以及在粉丝群体中的影响力。</p>
+                <p>通过精美的卡片式布局和直观的分类筛选，用户可以快速找到自己感兴趣的角色类型，无论是傲娇、御姐还是治愈系，都能在这里找到心仪的二次元伙伴。</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">编辑团队</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>资源分类</h3>
+                    <ul>
+                        <li><a href="#">动漫人物</a></li>
+                        <li><a href="#">游戏角色</a></li>
+                        <li><a href="#">原创插画</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>帮助中心</h3>
+                    <ul>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>联系方式</h3>
+                    <ul>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">合作洽谈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 H吧H女角色展示平台. 保留所有权利. 本站内容仅供交流展示，不涉及任何违规内容。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+                                                               </html>
