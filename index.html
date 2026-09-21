@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大连金逸国际影城-最新电影排期与购票指南</title>
+    <meta name="description" content="大连金逸国际影城官方首页，提供最新上映电影资讯、详细排期表、在线选座购票服务。涵盖3D、IMAX及VIP厅观影体验，会员积分兑换及优惠活动信息。">
+    <meta name="keywords" content="大连金逸国际影城, 大连电影票, 大连排期, 大连IMAX, 在线购票">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e50914;
+            --primary-hover: #b20710;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --bg-body: #f5f5f5;
+            --bg-white: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-top: var(--header-height);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background-color: rgba(0, 0, 0, 0.95);
+            color: white;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .logo span {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            color: #ddd;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn-login {
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .btn-login:hover {
+            border-color: white;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .btn-ticket {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .btn-ticket:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: url('https://picsum.photos/seed/moviehero1/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.3) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 600px;
+        }
+
+        .hero-tag {
+            background-color: var(--primary-color);
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 2px;
+            display: inline-block;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 24px;
+            color: #ddd;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 4px;
+            font-size: 16px;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            position: relative;
+            padding-left: 16px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 24px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .section-more {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .section-more:hover {
+            color: var(--primary-color);
+        }
+
+        /* Movie Grid */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 24px;
+        }
+
+        .movie-card {
+            background-color: var(--bg-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-poster {
+            position: relative;
+            padding-top: 140%;
+        }
+
+        .card-poster img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-rating {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: rgba(0,0,0,0.8);
+            color: #ffd700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .card-info {
+            padding: 12px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .card-tags {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 10px;
+            padding: 2px 6px;
+            background-color: #f0f0f0;
+            color: var(--text-secondary);
+            border-radius: 2px;
+        }
+
+        .tag.hot {
+            background-color: #fff0f0;
+            color: var(--primary-color);
+        }
+
+        /* Hall Info */
+        .hall-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .hall-item {
+            background: white;
+            padding: 24px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .hall-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+        }
+
+        .hall-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .hall-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Info & Features */
+        .info-section {
+            background-color: white;
+        }
+
+        .info-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .info-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-sidebar {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-list li {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-list h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-list p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #999;
+            padding: 60px 0 20px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                background-color: #111;
+                padding: 20px;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .header-actions {
+                display: none;
+            }
+
+            .hero {
+                height: 350px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hall-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <span>金逸</span>影城
+        </div>
+        <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#now-playing">正在热映</a></li>
+                <li><a href="#coming-soon">即将上映</a></li>
+                <li><a href="#halls">影厅服务</a></li>
+                <li><a href="#about">关于我们</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#" class="btn-login">登录 / 注册</a>
+            <a href="#" class="btn-ticket">在线选座购票</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-tag">今日首映</span>
+            <h1>星际穿越：重制版</h1>
+            <p>在无尽的宇宙中，探索人类情感的终极边界。IMAX 3D 版本震撼归来，带您体验前所未有的视觉奇观。</p>
+            <div class="hero-btns">
+                <a href="#" class="btn-primary">立即购票</a>
+                <a href="#" class="btn-secondary">查看预告片</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Now Playing Section -->
+    <section id="now-playing" class="container">
+        <div class="section-header">
+            <h2 class="section-title">正在热映</h2>
+            <a href="#" class="section-more">查看全部 ></a>
+        </div>
+        <div class="movie-grid">
+            <!-- Movie 1 -->
+            <article class="movie-card">
+                <div class="card-poster">
+                    <img src="https://picsum.photos/seed/movie1/300/450" alt="电影海报">
+                    <span class="card-rating">9.2</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">深海探险</h3>
+                    <p class="card-meta">2D / 99分钟</p>
+                    <div class="card-tags">
+                        <span class="tag hot">动作</span>
+                        <span class="tag">冒险</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Movie 2 -->
+            <article class="movie-card">
+                <div class="card-poster">
+                    <img src="https://picsum.photos/seed/movie2/300/450" alt="电影海报">
+                    <span class="card-rating">8.5</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">时光侦探</h3>
+                    <p class="card-meta">IMAX 3D / 120分钟</p>
+                    <div class="card-tags">
+                        <span class="tag hot">科幻</span>
+                        <span class="tag">悬疑</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Movie 3 -->
+            <article class="movie-card">
+                <div class="card-poster">
+                    <img src="https://picsum.photos/seed/movie3/300/450" alt="电影海报">
+                    <span class="card-rating">7.8</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">都市爱情</h3>
+                    <p class="card-meta">2D / 105分钟</p>
+                    <div class="card-tags">
+                        <span class="tag">爱情</span>
+                        <span class="tag">剧情</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Movie 4 -->
+            <article class="movie-card">
+                <div class="card-poster">
+                    <img src="https://picsum.photos/seed/movie4/300/450" alt="电影海报">
+                    <span class="card-rating">9.0</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">极速风暴</h3>
+                    <p class="card-meta">杜比全景声 / 110分钟</p>
+                    <div class="card-tags">
+                        <span class="tag hot">动作</span>
+                        <span class="tag">赛车</span>
+                    </div>
+                </div>
+            </article>
+
+             <!-- Movie 5 -->
+             <article class="movie-card">
+                <div class="card-poster">
+                    <img src="https://picsum.photos/seed/movie5/300/450" alt="电影海报">
+                    <span class="card-rating">8.9</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">魔法学院</h3>
+                    <p class="card-meta">IMAX 3D / 130分钟</p>
+                    <div class="card-tags">
+                        <span class="tag">奇幻</span>
+                        <span class="tag">家庭</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Movie 6 -->
+            <article class="movie-card">
+                <div class="card-poster">
+                    <img src="https://picsum.photos/seed/movie6/300/450" alt="电影海报">
+                    <span class="card-rating">8.1</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">特工计划</h3>
+                    <p class="card-meta">2D / 115分钟</p>
+                    <div class="card-tags">
+                        <span class="tag">惊悚</span>
+                        <span class="tag">犯罪</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Hall Services -->
+    <section id="halls" class="container" style="background-color: white; border-radius: 8px;">
+        <div class="section-header">
+            <h2 class="section-title">特色影厅</h2>
+            <a href="#" class="section-more">查看详情 ></a>
+        </div>
+        <div class="hall-grid">
+            <div class="hall-item">
+                <div class="hall-icon">🎬</div>
+                <h3 class="hall-title">IMAX 巨幕厅</h3>
+                <p class="hall-desc">27米超大银幕，沉浸式音效，打造如临其境的观影体验。</p>
+            </div>
+            <div class="hall-item">
+                <div class="hall-icon">🔊</div>
+                <h3 class="hall-title">杜比全景声厅</h3>
+                <p class="hall-desc">360度环绕声场，声音从四面八方袭来，听觉震撼升级。</p>
+            </div>
+            <div class="hall-item">
+                <div class="hall-icon">💺</div>
+                <h3 class="hall-title">VIP 豪华厅</h3>
+                <p class="hall-desc">真皮座椅、专属休息区、贴心服务，享受尊贵观影礼遇。</p>
+            </div>
+            <div class="hall-item">
+                <div class="hall-icon">🍿</div>
+                <h3 class="hall-title">情侣包厢</h3>
+                <p class="hall-desc">私密空间，私密观影，适合情侣及小团体聚会。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Info -->
+    <section id="about" class="container info-section">
+        <div class="section-header">
+            <h2 class="section-title">服务与指南</h2>
+        </div>
+        <div class="info-container">
+            <div class="info-content">
+                <h3>关于大连金逸国际影城</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">大连金逸国际影城致力于为市民提供高品质的视听娱乐体验。我们引进国内外最新上映影片，配备先进的放映设备，并提供舒适的观影环境。无论是家庭观影、情侣约会还是朋友聚会，金逸都是您的理想选择。</p>
+                <ul class="info-list">
+                    <li>
+                        <h4>📍 营业时间</h4>
+                        <p>每日 10:00 - 次日 01:30（节假日不休）</p>
+                    </li>
+                    <li>
+                        <h4>🎫 会员权益</h4>
+                        <p>注册会员即可享受购票折扣、积分兑换爆米花及饮料，生日当月更享特别优惠。</p>
+                    </li>
+                    <li>
+                        <h4>🚗 停车服务</h4>
+                        <p>影城配套大型停车场，提供免费停车券（凭当日电影票根兑换），停车费优惠。</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-sidebar">
+                <h3>常见问题</h3>
+                <ul class="info-list">
+                    <li>
+                        <h4>如何选座购票？</h4>
+                        <p>点击首页“在线选座购票”按钮，选择影片及场次，点击座位即可锁定。</p>
+                    </li>
+                    <li>
+                        <h4>儿童票标准是多少？</h4>
+                        <p>1.3米以下儿童免票（无座），1.3米以上按成人票购买。</p>
+                    </li>
+                    <li>
+                        <h4>支持哪些支付方式？</h4>
+                        <p>支持微信、支付宝、银行卡刷卡及现金支付。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon -->
+    <section id="coming-soon" class="container">
+        <div class="section-header">
+            <h2 class="section-title">即将上映</h2>
+            <a href="#" class="section-more">查看排期 ></a>
+        </div>
+        <div class="movie-grid">
+            <article class="movie-card">
+                <div class="card-poster">
+                    <img src="https://picsum.photos/seed/coming1/300/450" alt="电影海报">
+                    <span class="card-rating" style="background-color: #555;">敬请期待</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">未来纪元</h3>
+                    <p class="card-meta">待定 / 135分钟</p>
+                    <div class="card-tags">
+                        <span class="tag">科幻</span>
+                    </div>
+                </div>
+            </article>
+            <article class="movie-card">
+                <div class="card-poster">
+                    <img src="https://picsum.photos/seed/coming2/300/450" alt="电影海报">
+                    <span class="card-rating" style="background-color: #555;">敬请期待</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">回声</h3>
+                    <p class="card-meta">待定 / 110分钟</p>
+                    <div class="card-tags">
+                        <span class="tag">剧情</span>
+                    </div>
+                </div>
+            </article>
+            <article class="movie-card">
+                <div class="card-poster">
+                    <img src="https://picsum.photos/seed/coming3/300/450" alt="电影海报">
+                    <span class="card-rating" style="background-color: #555;">敬请期待</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">极速追击</h3>
+                    <p class="card-meta">待定 / 105分钟</p>
+                    <div class="card-tags">
+                        <span class="tag">动作</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>金逸影城</h3>
+                <p>专注电影，服务大众。大连金逸国际影城为您提供最优质的视听享受和最贴心的服务体验。</p>
+                <p>关注我们：微信公众号 / 新浪微博</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">在线购票</a></li>
+                    <li><a href="#">排期查询</a></li>
+                    <li><a href="#">会员中心</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>影院服务</h4>
+                <ul>
+                    <li><a href="#">影厅介绍</a></li>
+                    <li><a href="#">票务政策</a></li>
+                    <li><a href="#">优惠活动</a></li>
+                    <li><a href="#">招聘信息</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系我们</h4>
+                <ul>
+                    <li>电话：0411-8888 8888</li>
+                    <li>地址：大连市中山区人民路88号</li>
+                    <li>邮箱：service@jin-yi.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 大连金逸国际影城 版权所有 | 京ICP备XXXXXXXX号</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById('main-nav');
+        nav.classList.toggle('active');
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+            // Close mobile menu if open
+            document.getElementById('main-nav').classList.remove('active');
+        });
+    });
+</script>
+
+</body>
+  </html>
