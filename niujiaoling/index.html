@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="扭角羚详细介绍，包括生物分类、栖息环境、生活习性、保护现状及观赏指南。了解这种独特的大型羚羊及其生态价值。">
+    <meta name="keywords" content="扭角羚, 高鼻羚羊, 西藏羚羊, 羚牛, 野生动物保护, 中国特有物种, 生态环境">
+    <title>扭角羚-中国特有珍稀大型食草动物生态百科</title>
+    <style>
+        :root {
+            --primary-color: #2d5a27; /* 森林绿 */
+            --secondary-color: #8b5a2b; /* 棕色 */
+            --accent-color: #d4a017; /* 金色 */
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-light: #f9f9f7;
+            --bg-white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/yak/1600/900') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+            border-radius: var(--border-radius);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #1e4616;
+            transform: translateY(-2px);
+        }
+
+        /* 主要内容区 */
+        main {
+            padding-bottom: 4rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* 简介 Grid */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .intro-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .intro-text p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .intro-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* 特征卡片 */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* 栖息环境 */
+        .habitat-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+        }
+
+        .habitat-map-placeholder {
+            width: 100%;
+            height: 350px;
+            background-color: #eef2f3;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .habitat-map-placeholder::before {
+            content: '模拟栖息地分布示意图';
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .habitat-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .habitat-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .check-icon {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+
+        /* 生态保护 */
+        .protection-bar {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            margin: 4rem 0;
+            border-radius: var(--border-radius);
+        }
+
+        .protection-content {
+            text-align: center;
+        }
+
+        .protection-content h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .protection-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* 常见问题 */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .faq-question:hover {
+            background-color: #f0f0f0;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-light);
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            max-height: 500px; /* 足够大以容纳内容 */
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+            font-size: 1.5rem;
+        }
+
+        .faq-item .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #1a1a1a;
+            color: #aaa;
+            padding: 3rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #333;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                🦁 <span>扭角羚百科</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">物种简介</a></li>
+                    <li><a href="#features">形态特征</a></li>
+                    <li><a href="#habitat">栖息环境</a></li>
+                    <li><a href="#protection">生态保护</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>扭角羚</h1>
+                <p>中国特有的大型食草动物，青藏高原上的“活化石”，以其独特的弯曲双角闻名于世。</p>
+                <a href="#intro" class="cta-button">探索物种详情</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 简介 Section -->
+            <section id="intro">
+                <div class="section-title">
+                    <h2>物种简介</h2>
+                    <p>了解扭角羚的基本身份与地位</p>
+                </div>
+                <div class="intro-grid">
+                    <div class="intro-image">
+                        <img src="https://picsum.photos/seed/yak2/600/400" alt="扭角羚在高原草甸">
+                    </div>
+                    <div class="intro-text">
+                        <h3>独特的身份</h3>
+                        <p><strong>扭角羚</strong>（学名：Budorcas taxicolor），别名羚牛，是中国特有的大型牛科动物。它们主要栖息在青藏高原东缘的高山森林、灌丛和草甸地带。扭角羚是世界上体型最大的羊科动物之一，因其独特的角向后弯曲成环状而得名。</p>
+                        <p>扭角羚是青藏高原生态系统中关键的物种，作为食草动物，它们在维护高山植被结构、传播种子等方面扮演着重要角色。由于栖息地破碎化和非法狩猎等原因，扭角羚曾一度面临生存威胁，目前已被列为国家一级保护动物。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 形态特征 Section -->
+            <section id="features">
+                <div class="section-title">
+                    <h2>形态特征</h2>
+                    <p>观察扭角羚的生理特征与生活习性</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <span class="feature-icon">🦴</span>
+                        <h4>巨大体型</h4>
+                        <p>成体体重可达300-600公斤，肩高可达1.5-2米，外形雄壮，给人以极强的视觉冲击力。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">🥇</span>
+                        <h4>独特双角</h4>
+                        <p>雄性扭角羚拥有粗壮的双角，向后上方弯曲，角尖相对，形成独特的“双环”或“扭角”结构。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">🧥</span>
+                        <h4>毛色变化</h4>
+                        <p>随年龄和季节变化明显。幼体为金棕色，成体背部多为黄褐色或红棕色，腹部为白色。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">🦶</span>
+                        <h4>适应地形</h4>
+                        <p>四肢粗壮有力，蹄子宽大，趾间有蹼，非常适合在崎岖不平的高山岩石和冰雪路面上行走。</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 栖息环境 Section -->
+            <section id="habitat">
+                <div class="section-title">
+                    <h2>栖息环境</h2>
+                    <p>它们生活在哪里？</p>
+                </div>
+                <div class="habitat-section">
+                    <div class="habitat-map-placeholder">
+                        <!-- 占位图示意 -->
+                    </div>
+                    <div class="habitat-list">
+                        <div class="habitat-item">
+                            <span class="check-icon">✓</span>
+                            <div>
+                                <strong>高山森林</strong>
+                                <p>主要活动区域，通常位于海拔2000-4500米之间，植被茂密。</p>
+                            </div>
+                        </div>
+                        <div class="habitat-item">
+                            <span class="check-icon">✓</span>
+                            <div>
+                                <strong>高山草甸</strong>
+                                <p>夏季主要的觅食场所，提供丰富的草本植物。</p>
+                            </div>
+                        </div>
+                        <div class="habitat-item">
+                            <span class="check-icon">✓</span>
+                            <div>
+                                <strong>岩石峭壁</strong>
+                                <p>冬季为了躲避天敌和寻找食物，会活动在险峻的岩石地带。</p>
+                            </div>
+                        </div>
+                        <div class="habitat-item">
+                            <span class="check-icon">✓</span>
+                            <div>
+                                <strong>垂直迁徙</strong>
+                                <p>具有明显的垂直迁徙习性，随季节变化在低海拔和高海拔之间移动。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 生态保护 Section -->
+            <section id="protection" class="protection-bar">
+                <div class="container protection-content">
+                    <h2>生态保护现状</h2>
+                    <div class="protection-tags">
+                        <span class="tag">国家一级保护动物</span>
+                        <span class="tag">CITES 附录I</span>
+                        <span class="tag">中国特有物种</span>
+                        <span class="tag">全球近危 (VU)</span>
+                    </div>
+                    <p style="margin-top: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.9;">
+                        扭角羚不仅是自然界的宝贵财富，也是衡量高原生态系统健康的重要指标。保护扭角羚及其栖息地，就是保护整个青藏高原的生态平衡。
+                    </p>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq">
+                <div class="section-title">
+                    <h2>常见问题</h2>
+                    <p>关于扭角羚的常见疑问解答</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">扭角羚和野牛是亲戚吗？</div>
+                        <div class="faq-answer">
+                            <p>是的，从生物分类学上讲，扭角羚属于牛科下的羊亚科，与野牛（Bison）是近亲，但在形态和生活习性上更接近羊类。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">扭角羚有天敌吗？</div>
+                        <div class="faq-answer">
+                            <p>在成年扭角羚身上，几乎没有天敌。主要威胁来自于人类活动，如栖息地破坏、非法盗猎和道路建设造成的隔离。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如果在野外遇到扭角羚怎么办？</div>
+                        <div class="faq-answer">
+                            <p>保持安全距离，不要惊吓或试图接近。扭角羚虽然看起来笨重，但在受到威胁时非常具有攻击性。切勿投喂食物。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">扭角羚的角有什么特殊用途？</div>
+                        <div class="faq-answer">
+                            <p>雄性扭角羚的角主要用于争夺配偶时的格斗和族群内的等级争斗。雌性通常没有角或角较小。角本身在传统医学中曾被误传有药用价值，这是导致盗猎的主要原因之一。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于扭角羚</h4>
+                    <p>致力于普及中国特有珍稀野生动物知识，提高公众生态保护意识。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">中国野生动物保护协会</a></li>
+                        <li><a href="#">世界自然基金会 (WWF)</a></li>
+                        <li><a href="#">国家公园管理局</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>info@budorcas-bio.org</li>
+                        <li>保护热线：12345</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 扭角羚生态科普平台. 保留所有权利. 本网站内容仅供科普教育参考。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+
+    <script>
+        // 简单的 FAQ 折叠交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 如果希望一次只打开一个，可以取消下面这行的注释
+                    // faqItems.forEach(otherItem => {
+                    //     if (otherItem !== item) otherItem.classList.remove('active');
+                    // });
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
